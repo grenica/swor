@@ -1,0 +1,20 @@
+plugin:
+    name: 'grzegorzczekaj.ogloszenia::lang.plugin.name'
+    description: 'Plugin od obsługi ogłoszeń'
+    author: 'Grzegorz Czekaj'
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Ogłoszenia
+        url: grzegorzczekaj/ogloszenia/news
+        icon: icon-child
+        sideMenu:
+            side-menu-item:
+                label: Kategorie
+                url: grzegorzczekaj/ogloszenia/category
+                icon: icon-skyatlas
+            side-menu-item2:
+                label: Aktualności
+                url: grzegorzczekaj/ogloszenia/news
+                icon: icon-suitcase

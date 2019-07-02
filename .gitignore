@@ -5,7 +5,10 @@
 /config
 /modules
 /storage
-/plugins/*
+/plugins/demo/
+/plugins/october/
+/plugins/rainlab/
+/plugins/anandpatel/
 /themes/demo/
 /themes/swor/assets/vendor/
 index.*

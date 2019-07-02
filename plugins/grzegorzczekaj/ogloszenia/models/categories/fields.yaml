@@ -1,0 +1,12 @@
+fields:
+    category:
+        label: Kategoria
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: category
+            type: slug
+        type: text

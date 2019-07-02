@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table grzegorzczekaj_ogloszenia_categories'
+    - builder_table_create_grzegorzczekaj_ogloszenia_categories.php
+1.0.3:
+    - 'Created table grzegorzczekaj_ogloszenia_news'
+    - builder_table_create_grzegorzczekaj_ogloszenia_news.php
+1.0.4:
+    - 'Updated table grzegorzczekaj_ogloszenia_news'
+    - builder_table_update_grzegorzczekaj_ogloszenia_news.php
+1.0.5:
+    - 'Updated table grzegorzczekaj_ogloszenia_categories_news'
+    - builder_table_update_grzegorzczekaj_ogloszenia_categories_news.php
+1.0.6:
+    - 'Updated table grzegorzczekaj_ogloszenia_categories'
+    - builder_table_update_grzegorzczekaj_ogloszenia_categories.php
+1.0.7:
+    - 'Updated table grzegorzczekaj_ogloszenia_news'
+    - builder_table_update_grzegorzczekaj_ogloszenia_news_2.php
+1.0.8:
+    - 'Updated table grzegorzczekaj_ogloszenia_news'
+    - builder_table_update_grzegorzczekaj_ogloszenia_news_3.php

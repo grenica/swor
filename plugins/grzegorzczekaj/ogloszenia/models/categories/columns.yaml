@@ -1,0 +1,19 @@
+columns:
+    id:
+        label: id
+        type: number
+    category:
+        label: category
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+        searchable: false
+    updated_at:
+        label: updated_at
+        type: datetime
+        searchable: false
+    slug:
+        label: slug
+        type: text
+        invisible: true

@@ -1,0 +1,11 @@
+name: News
+modelClass: GrzegorzCzekaj\Ogloszenia\Models\News
+form: $/grzegorzczekaj/ogloszenia/models/news/fields.yaml
+defaultRedirect: grzegorzczekaj/ogloszenia/news
+create:
+    redirect: 'grzegorzczekaj/ogloszenia/news/update/:id'
+    redirectClose: grzegorzczekaj/ogloszenia/news
+update:
+    redirect: grzegorzczekaj/ogloszenia/news
+    redirectClose: grzegorzczekaj/ogloszenia/news
+preview: {  }

@@ -1,0 +1,28 @@
+fields:
+    name:
+        label: Nazwa
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    desc:
+        label: Opis
+        size: ''
+        span: full
+        type: richeditor
+    isnew:
+        label: Publikacja
+        span: auto
+        default: 1
+        type: switch
+    categories:
+        label: Kategoria
+        nameFrom: category
+        descriptionFrom: description
+        span: auto
+        type: relation

@@ -1,0 +1,33 @@
+columns:
+    id:
+        label: ID
+        type: number
+    name:
+        label: name
+        type: text
+        searchable: true
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+        invisible: true
+    isnew:
+        label: isnew
+        type: text
+    deleted_at:
+        label: deleted_at
+        type: datetime
+        invisible: true
+    slug:
+        label: slug
+        type: text
+    desc:
+        label: desc
+        type: text
+        invisible: true
+    author_id:
+        label: author_id
+        type: text
+        invisible: true
