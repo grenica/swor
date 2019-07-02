@@ -1,0 +1,41 @@
+name: menu-boczne
+items:
+    -
+        title: Aktualności
+        nesting: ''
+        type: url
+        url: /swor/aktualnosci
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Zarządzenia
+        nesting: ''
+        type: url
+        url: /swor/zarzadzenia
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Portal Informacyjny'
+        nesting: ''
+        type: url
+        url: /swor/portal-informacyjny
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

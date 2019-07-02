@@ -1,0 +1,90 @@
+ $header-color: #90a9c0;
+
+ * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #8dbd89;
+    font-family: 'Lato', sans-serif;
+}
+
+// smarfony
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+    background-color: $header-color;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.navbar {
+    position: fixed;
+    width: 100%;
+    font-size: 18px;
+   // padding-bottom: 10px;
+   //border-bottom: solid 1px #153258;
+   height: 40px;
+   z-index: 40;
+  }
+
+.navbar::after {
+    content: "";
+    display: block;
+    margin: 0 auto; /* wyśrodkowanie */
+    width:80%;
+    height: 10px;
+    //background-color: brown;
+
+    
+}
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color:rgb(87, 81, 81);
+    font-size: 24px;
+}
+.logo {
+   color:rgb(87, 81, 81);
+   display: inline-block;
+   font-size: 24px;
+   margin-top: 8px;
+   //margin-left: 20px;
+   width: 20%;
+   text-align: center;
+ } 
+  
+.main-nav {
+    display: none;
+    list-style-type: none;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: 100vh;
+}
+.nav-links, .logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.702);
+    
+}
+.nav-links:hover {
+    display: block;
+    background-color: #3f2d2d;
+}
+
+
+@media (min-width: 768px) {
+ .container {
+      display: grid;
+      flex-direction: column;
+ }
+}

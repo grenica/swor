@@ -1,0 +1,37 @@
+name: 'menu główne'
+items:
+    -
+        title: Start
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: home
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: IT
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: it
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: cat
+        type: cms-page
+        code: ''
+        reference: cat
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

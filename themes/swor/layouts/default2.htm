@@ -1,0 +1,54 @@
+description = "Default2"
+
+[staticMenu]
+code = "menu-boczne"
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SWOR {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+      
+        <link href="{{ ['assets/scss/style2.scss']|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+        <div class="contener">
+        <!-- Header -->
+        <header id="layout-header">
+        <h1>
+            System informacji wewnętrznej 
+        </h1>
+          {#  {% partial 'site/header' %} #}
+        </header>
+        <aside id="aside-menu">
+            {% component 'staticMenu' %}
+        </aside>
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/js/jquery-3.4.0.min.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/js/app.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </div>
+    </body>
+</html>

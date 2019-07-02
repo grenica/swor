@@ -1,0 +1,14 @@
+.DS_Store
+*.log
+/vendor
+/bootstrap
+/config
+/modules
+/storage
+/plugins/*
+/themes/demo/
+/themes/swor/assets/vendor/
+index.*
+server.*
+artisan
+.htaccess
