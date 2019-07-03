@@ -24,22 +24,22 @@ default = 0
     <body>
         <div class="contener">
         <!-- Header -->
-        <header id="layout-header">
+        <header class="layout-header">
         <h1>
             System informacji wewnętrznej 
         </h1>
           {#  {% partial 'site/header' %} #}
         </header>
-        <aside id="aside-menu">
+        <aside class="aside-menu">
             {% component 'staticMenu' %}
         </aside>
         <!-- Content -->
-        <section id="layout-content">
+        <section class="layout-content">
             {% page %}
         </section>
 
         <!-- Footer -->
-        <footer id="layout-footer">
+        <footer class="layout-footer">
             {% partial 'site/footer' %}
         </footer>
 
