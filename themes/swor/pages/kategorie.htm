@@ -36,12 +36,11 @@ function onStart()
 }
 ?>
 ==
-<h1>
+{#
 {% component 'builderDetails' %}
-</h1>
+#}
 
-<H2>Detail </H2>
-<h1>
+<h1> </h1>
 {% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
@@ -95,4 +94,3 @@ function onStart()
         {% endif %}
     </ul>
 {% endif %}
-</h1>
