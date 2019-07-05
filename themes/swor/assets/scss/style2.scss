@@ -37,17 +37,43 @@ $header-color: #95a6b6;
     }
    
     .layout-header {
+      position: relative;
       padding: 20px 20px;
       grid-area: header;
-      height: 200px;
+      height: 100px;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+
       background-image:linear-gradient(to bottom right, #487462, #b3b9bb); 
       h1 {
+        //text-align: center;
+        
+      }
+    }
+    .mylinks {
+      display: block;
+      width: 100px;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      a {
         text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 7px;
+        color: #e4e7e3;
+        background-image:linear-gradient(to right, #d8d532, #e61a1a); 
+        padding: 6px;
+        border-radius: 3px;
+        border: 1px solid black;
       }
     }
     .aside-menu {
       grid-area: aside;
       background-color: #4c5357;
+      min-height: 80%;
       a {
         padding: 5px 5px;
         display: block;

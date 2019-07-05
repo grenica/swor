@@ -9,8 +9,10 @@
 /plugins/october/
 /plugins/rainlab/
 /plugins/anandpatel/
+/plugins/uno/
 /themes/demo/
 /themes/swor/assets/vendor/
+/themes/hambern*
 index.*
 server.*
 artisan
