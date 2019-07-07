@@ -39,3 +39,129 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+    -
+        title: 'Regulanim Organizacyjny'
+        nesting: ''
+        type: url
+        url: /swor/regulamin-organizacyjny
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Kontrola Zarządcza'
+        nesting: ''
+        type: url
+        url: /swor/kontrola-zarzadcza
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Ławnicy
+        nesting: ''
+        type: url
+        url: /swor/lawnicy
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Polityka Bezpieczenstwa'
+        nesting: ''
+        type: url
+        url: /swor/polityka-bezpieczenstwa
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Sprawy Socjalne'
+        nesting: ''
+        type: url
+        url: /swor/sprawy-socjalne
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Ochrona danych osobowych'
+        nesting: ''
+        type: url
+        url: /swor/ochrona-danych-osobowych
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Regulamin organizacyjny'
+        nesting: ''
+        type: url
+        url: /swor/regulamin-organizacyjny
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Regulamin pracy'
+        nesting: ''
+        type: url
+        url: /swor/regulamin-pracy
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Sprawy socjalne'
+        nesting: ''
+        type: url
+        url: /swor/sprawy-socjalne
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Ochrona danych osobowych'
+        type: url
+        url: /swor/ochrona-danych-osobowych
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

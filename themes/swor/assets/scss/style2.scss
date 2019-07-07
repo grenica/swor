@@ -27,9 +27,12 @@ $header-color: #95a6b6;
   @media (min-width: 768px) {
     .contener {
          display: grid;
-        
+         //justify-items: stretch;
+         //align-items: stretch;
+         min-height: 100vh;
          grid-template-columns: 1fr 2fr 1fr;
-         grid-template-rows: auto;
+         grid-template-rows: 130px auto 60px;
+         //grid-template-rows: auto;
          grid-template-areas: 
          "header header header" 
          "aside content content" 
@@ -40,7 +43,7 @@ $header-color: #95a6b6;
       position: relative;
       padding: 20px 20px;
       grid-area: header;
-      height: 100px;
+      
       -webkit-box-shadow: 0 8px 6px -6px black;
       -moz-box-shadow: 0 8px 6px -6px black;
       box-shadow: 0 8px 6px -6px black;
@@ -48,7 +51,8 @@ $header-color: #95a6b6;
       background-image:linear-gradient(to bottom right, #487462, #b3b9bb); 
       h1 {
         //text-align: center;
-        
+        //font-weight: bold;
+        //text-transform: uppercase;
       }
     }
     .mylinks {
@@ -56,49 +60,97 @@ $header-color: #95a6b6;
       width: 100px;
       height: 50px;
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: 5%;
+      right: 5%;
+      // a {
+      //   text-align: center;
+      //   text-decoration: none;
+      //   display: block;
+      //   font-size: 1.4rem;
+      //   color: #e4e7e3;
+      //   background-image:linear-gradient(to right, #d8d532, #e61a1a); 
+      //   padding: 6px;
+      //   border-radius: 10px;
+      //   border: 2px solid black;
+      // }
+
+    }
+
+    .linki {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
       a {
         text-align: center;
+        font-weight: 700;
+        font-size: 21px; //to do
+        padding: 10px 10px;
+        color: #1b1313;
+        border-radius: 10px 10px 10px 10px;
+        display: inline-block;
         text-decoration: none;
-        display: block;
-        font-size: 7px;
-        color: #e4e7e3;
-        background-image:linear-gradient(to right, #d8d532, #e61a1a); 
-        padding: 6px;
-        border-radius: 3px;
-        border: 1px solid black;
+        &:hover {
+          text-decoration: none;
+
+        }
       }
     }
     .aside-menu {
       grid-area: aside;
+      align-self: stretch;
       background-color: #4c5357;
-      min-height: 80%;
+      //min-height: 100%;
       a {
-        padding: 5px 5px;
+        padding: 4px 4px;
         display: block;
         text-decoration:none;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: bold;
         color: #b3b9bb;
 
         &:hover {
           background-color: #697175;
+          text-decoration:none;
+          color: #b3b9bb;
         }
       }
     }
     .layout-content {
       grid-area: content;
+      align-self: stretch;
       padding: 20px 20px;
-      
+      ul {
+        list-style: none;
+      }
+      li {
+        background-color: #c8cdd1;
+        margin: 6px 0;
+        padding: 10px 14px;
+        border-bottom: 2px solid #303031;
+        border-radius: 6px 6px 3px 3px;
+        //box-shadow: 2px 3px 3px 2px #303031;
+        a {
+          font-size: 1.3rem;
+          text-decoration: none;
+          color: #e61a1a;
+          display: block;
+          &:hover {
+            color: #cf5e5e;
+          }
+        }
+      }
 
     }
     .layout-footer {
       grid-area: footer;
+      align-self: end;
       background-color: #303031;
       color: #b2b3ac;
       text-align: center;
       padding: 10px 5px;
+     
     }
    }

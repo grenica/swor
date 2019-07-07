@@ -35,5 +35,6 @@ class News extends Model
     public function beforeSave() {
          $user = BackendAuth::getUser(); 
          $this->author_id = $user->id; 
+         $this->author = $user->first_name.' '.$user->last_name;
          }
 }

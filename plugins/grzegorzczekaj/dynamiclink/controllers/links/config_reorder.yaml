@@ -1,0 +1,4 @@
+title: Links
+modelClass: GrzegorzCzekaj\Dynamiclink\Models\Links
+toolbar:
+    buttons: reorder_toolbar

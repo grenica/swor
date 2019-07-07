@@ -1,6 +1,32 @@
-description = "Linki"
+description = "Links"
 
 [viewBag]
+
+[builderList builderList2]
+modelClass = "GrzegorzCzekaj\Dynamiclink\Models\Links"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "posision"
+sortDirection = "asc"
+==
+<?php
+use \Grzegorzczekaj\Dynamiclink\Models\Links;
+
+function onStart()
+{
+   
+  //  $this['news'] = News::where('id', '1')->get();
+ // $cat = Categories::where('slug',$slugcat)->first();
+  //$this['news'] = $cat->news()->get();
+  //$this['news'] = News::where('category', $cat.id)->get();
+  //dd($news);
+}
+?>
 ==
 <a data-toggle="modal" href="#contentBasic" class="btn btn-primary btn-lg">
                 Linki
@@ -11,7 +37,42 @@ description = "Linki"
         <div class="modal-content">
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <p>This is a very basic example of a popup...</p>
+               
+{% set records = builderList2.records %}
+{% set displayColumn = builderList2.displayColumn %}
+{% set noRecordsMessage = builderList2.noRecordsMessage %}
+{% set detailsPage = builderList2.detailsPage %}
+{% set detailsKeyColumn = builderList2.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList2.detailsUrlParameter %}
+
+<div class="linki">
+    {% for record in records %}
+    
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+       
+                    
+                    {% if record.check == 2 %}
+                       <a href="{{ record.link }}" style="background-image:linear-gradient(to right, {{record.backgr_color_start}}, {{record.backgr_color_end}})">
+                        {{ attribute(record, displayColumn) }}
+                      </a>
+                    {% elseif record.check == 1 %}
+                    <a href="{{ record.link }}">
+                      <img  src="{{record.backgr_image|media}}"/>
+                      </a>
+                    {% endif %}
+                
+                       
+                    </a>
+                
+            {% endspaceless %}
+        
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</div>
+
+
             </div>
         </div>
     </div>

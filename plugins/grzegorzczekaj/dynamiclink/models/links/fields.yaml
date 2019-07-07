@@ -1,0 +1,39 @@
+fields:
+    name:
+        label: Nazwa
+        span: auto
+        type: text
+    section1:
+        label: 'Dane linku'
+        span: full
+        type: section
+    backgr_color_start:
+        label: 'Kolor background start'
+        span: auto
+        type: colorpicker
+    backgr_color_end:
+        label: 'Kolor background end'
+        span: auto
+        type: colorpicker
+    check:
+        label: Wybór
+        options:
+            1: Obraz
+            2: Gradient
+        span: auto
+        type: radio
+    posision:
+        label: Pozycja
+        span: auto
+        type: number
+    link:
+        label: Link
+        oc.commentPosition: above
+        span: auto
+        placeholder: 'http://'
+        type: text
+    backgr_image:
+        label: 'Znajdz obraz'
+        mode: file
+        span: auto
+        type: mediafinder

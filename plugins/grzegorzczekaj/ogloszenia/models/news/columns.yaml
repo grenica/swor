@@ -31,3 +31,6 @@ columns:
         label: author_id
         type: text
         invisible: true
+    author:
+        label: author
+        type: text

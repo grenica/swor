@@ -30,7 +30,9 @@ function onStart()
     $slugcat = $this->param('slug');
   //  $this['news'] = News::where('id', '1')->get();
   $cat = Categories::where('slug',$slugcat)->first();
-  $this['news'] = $cat->news()->get();
+  //$this['news'] = $cat->news()->get();
+  $news = $cat->news()->where('isnew',1)->get();
+  $this['news']=$news;
   //$this['news'] = News::where('category', $cat.id)->get();
   //dd($news);
 }
@@ -40,7 +42,6 @@ function onStart()
 {% component 'builderDetails' %}
 #}
 
-<h1> </h1>
 {% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
@@ -69,7 +70,7 @@ function onStart()
         #}
     {% for n in news %}
      <li>
-     
+        <p>{{ n.author }} ,data: {{ n.created_at|date('Y-m-d')}}</p>
          <a href="{{'news_detail'|page({slug: n.slug }) }}">{{ n.name }}</a>
      </li>   
     {% else %}
