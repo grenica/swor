@@ -31,7 +31,7 @@ $header-color: #95a6b6;
          //align-items: stretch;
          min-height: 100vh;
          grid-template-columns: 1fr 2fr 1fr;
-         grid-template-rows: 130px auto 60px;
+         grid-template-rows: 140px auto 60px;
          //grid-template-rows: auto;
          grid-template-areas: 
          "header header header" 
@@ -48,7 +48,7 @@ $header-color: #95a6b6;
       -moz-box-shadow: 0 8px 6px -6px black;
       box-shadow: 0 8px 6px -6px black;
 
-      background-image:linear-gradient(to bottom right, #487462, #b3b9bb); 
+      background-image:linear-gradient(to bottom right, #a17f4b, #b3b9bb); 
       h1 {
         //text-align: center;
         //font-weight: bold;
@@ -100,15 +100,15 @@ $header-color: #95a6b6;
     .aside-menu {
       grid-area: aside;
       align-self: stretch;
-      background-color: #4c5357;
+      background-color: #3d4144;
       //min-height: 100%;
       a {
-        padding: 4px 4px;
+        padding: 3px 3px;
         display: block;
         text-decoration:none;
         text-align: center;
-        font-size: 1.4rem;
-        font-weight: bold;
+        font-size: 1.1rem;
+        font-weight: 800;
         color: #b3b9bb;
 
         &:hover {
@@ -150,7 +150,9 @@ $header-color: #95a6b6;
       background-color: #303031;
       color: #b2b3ac;
       text-align: center;
-      padding: 10px 5px;
-     
+      padding: 5px 5px;
+      h3 {
+        font-size: 22px;
+      }
     }
    }

@@ -1,6 +1,7 @@
 <?php return [
     'plugin' => [
         'name' => 'Ogłoszenia',
-        'description' => ''
-    ]
+        'description' => '',
+    ],
+    'Published' => 'Published',
 ];

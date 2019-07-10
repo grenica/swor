@@ -15,7 +15,7 @@ fields:
         size: ''
         span: full
         type: richeditor
-    isnew:
+    published:
         label: Publikacja
         span: auto
         default: 1

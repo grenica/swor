@@ -144,23 +144,12 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Sprawy socjalne'
-        nesting: ''
-        type: url
-        url: /swor/sprawy-socjalne
+        title: IT
+        nesting: '0'
+        type: static-page
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: 'Ochrona danych osobowych'
-        type: url
-        url: /swor/ochrona-danych-osobowych
-        code: ''
+        reference: it
+        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
