@@ -1,4 +1,0 @@
-title: Zarzadzenia
-modelClass: GrzegorzCzekaj\Ogloszenia\Models\News
-toolbar:
-    buttons: reorder_toolbar

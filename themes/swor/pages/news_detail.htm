@@ -14,9 +14,11 @@ notFoundMessage = "Record not found"
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
+<div class="item">
 {% if record %}
     <h2> {{ attribute(record, displayColumn) }} </h2>
      {{ record.desc|raw }}
 {% else %}
     {{ notFoundMessage }}
 {% endif %}
+</div>

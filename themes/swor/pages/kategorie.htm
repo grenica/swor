@@ -20,6 +20,8 @@ detailsPage = "news_detail"
 detailsKeyColumn = "slug"
 detailsUrlParameter = "slug"
 pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "asc"
 ==
 <?php
 use \Grzegorzczekaj\Ogloszenia\Models\News;
@@ -31,7 +33,7 @@ function onStart()
   //  $this['news'] = News::where('id', '1')->get();
   $cat = Categories::where('slug',$slugcat)->first();
   //$this['news'] = $cat->news()->get();
-  $news = $cat->news()->where('published',1)->get();
+  $news = $cat->news()->where('published',1)->orderBy('created_at','desc')->get();
   $this['news']=$news;
   //$this['news'] = News::where('category', $cat.id)->get();
   //dd($news);
@@ -70,7 +72,7 @@ function onStart()
         #}
     {% for n in news %}
      <li>
-        <p>{{ n.author }} ,data: {{ n.created_at|date('Y-m-d')}}</p>
+        <p>{{ n.author }} , {{ n.created_at|date('Y-m-d')}}</p>
          <a href="{{'news_detail'|page({slug: n.slug }) }}">{{ n.name }}</a>
      </li>   
     {% else %}

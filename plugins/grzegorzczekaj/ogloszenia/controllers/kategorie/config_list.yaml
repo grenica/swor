@@ -1,12 +1,12 @@
-title: Category
-modelClass: GrzegorzCzekaj\Ogloszenia\Models\Categories
 list: $/grzegorzczekaj/ogloszenia/models/categories/columns.yaml
-recordUrl: 'grzegorzczekaj/ogloszenia/category/update/:id'
+modelClass: GrzegorzCzekaj\Ogloszenia\Models\Categories
+title: Kategorie
 noRecordsMessage: 'backend::lang.list.no_records'
-recordsPerPage: 20
 showSetup: true
 showCheckboxes: true
+recordsPerPage: 20
 toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'grzegorzczekaj/ogloszenia/kategorie/update/:id'

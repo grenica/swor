@@ -1,0 +1,10 @@
+name: Kategorie
+form: $/grzegorzczekaj/ogloszenia/models/categories/fields.yaml
+modelClass: GrzegorzCzekaj\Ogloszenia\Models\Categories
+defaultRedirect: grzegorzczekaj/ogloszenia/kategorie
+create:
+    redirect: 'grzegorzczekaj/ogloszenia/kategorie/update/:id'
+    redirectClose: grzegorzczekaj/ogloszenia/kategorie
+update:
+    redirect: grzegorzczekaj/ogloszenia/kategorie
+    redirectClose: grzegorzczekaj/ogloszenia/kategorie

@@ -4,18 +4,23 @@ layout = "default2"
 is_hidden = 0
 
 [PleaseWait]
+==
+<?php
+use \Grzegorzczekaj\Ogloszenia\Models\News;
+use \Grzegorzczekaj\Ogloszenia\Models\Categories;
 
-[builderList builderList3]
-modelClass = "GrzegorzCzekaj\Ogloszenia\Models\News"
-scope = "-"
-scopeValue = "{{ :scope }}"
-displayColumn = "name"
-noRecordsMessage = "No records found"
-detailsPage = "-"
-detailsUrlParameter = "id"
-pageNumber = "{{ :page }}"
-sortColumn = "id"
-sortDirection = "desc"
+function onStart()
+{
+   
+  $cat = Categories::where('category','Aktualności')->first();
+  //dd($cat);
+  //$this['news'] = $cat->news()->get();
+  $news = $cat->news()->where('published',1)->orderBy('created_at','desc')->take(5)->get();
+  $this['news']=$news;
+  //$this['news'] = News::where('category', $cat.id)->get();
+  //dd($news);
+}
+?>
 ==
 <!--
 <div class="jumbotron">
@@ -25,27 +30,16 @@ sortDirection = "desc"
 </div>
 -->
 {% component 'PleaseWait' %}
-{% set records = builderList3.records %}
-{% set displayColumn = builderList3.displayColumn %}
-{% set noRecordsMessage = builderList3.noRecordsMessage %}
-{% set detailsPage = builderList3.detailsPage %}
-{% set detailsKeyColumn = builderList3.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList3.detailsUrlParameter %}
+
 
 <ul class="record-list">
-    {% for record in records %}
+    {% for n in news %}
         <li>
             {# Use spaceless tag to remove spaces inside the A tag. #}
             {% spaceless %}
-                {% if detailsPage %}
-                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
-                {% endif %}
-
-                {{ attribute(record, displayColumn) }}
-
-                {% if detailsPage %}
-                    </a>
-                {% endif %}
+                    
+                    <a href="{{ 'news_detail'|page({slug: n.slug }) }}"> {{ n.name }} </a>
+               
             {% endspaceless %}
         </li>
     {% else %}

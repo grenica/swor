@@ -7,14 +7,14 @@ plugin:
 navigation:
     main-menu-item:
         label: Ogłoszenia
-        url: grzegorzczekaj/ogloszenia/news
+        url: grzegorzczekaj/ogloszenia/ogloszenia
         icon: icon-child
         sideMenu:
             side-menu-item:
                 label: Kategorie
-                url: grzegorzczekaj/ogloszenia/category
+                url: grzegorzczekaj/ogloszenia/kategorie
                 icon: icon-skyatlas
             side-menu-item2:
                 label: Aktualności
-                url: grzegorzczekaj/ogloszenia/news
+                url: grzegorzczekaj/ogloszenia/ogloszenia
                 icon: icon-suitcase
