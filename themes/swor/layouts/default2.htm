@@ -36,10 +36,14 @@ default = 0
               {% partial 'site/links' %}
          {# </div> #}
         
-          {#  {% partial 'site/header' %} #}
+           {# {% partial 'site/header' %} #}
         </header>
         <aside class="aside-menu">
-            {% component 'staticMenu' %}
+            {% if staticMenu.menuItems %}
+    <ul>
+        {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+    </ul>
+{% endif %}
         </aside>
         <!-- Content -->
         <section class="layout-content">
