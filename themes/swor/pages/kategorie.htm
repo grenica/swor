@@ -29,40 +29,15 @@ function onStart()
   $cat = Categories::where('slug',$slugcat)->first();
   
   $news = $cat->news()->where('published',1)->orderBy('created_at','desc')->paginate(5);
-
- //dd($news);
   
   $this['news']=$news;
   
 }
 ?>
 ==
-{% set records = builderList.records %}
-{% set displayColumn = builderList.displayColumn %}
-{% set noRecordsMessage = builderList.noRecordsMessage %}
-{% set detailsPage = builderList.detailsPage %}
-{% set detailsKeyColumn = builderList.detailsKeyColumn %}
-{% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
 <ul class="record-list">
-    {#
-    {% for record in records %}
-        <li>
-            
-            {% spaceless %}
-                {% if detailsPage %}
-                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}"> 
-                    
-                {% endif %}
-
-                {{ attribute(record, displayColumn) }}
-
-                {% if detailsPage %}
-                    </a>
-                {% endif %}
-            {% endspaceless %}
-        </li>
-        #}
+    
      {% for n in news %}
      <li>
         <p>{{ n.author }} , {{ n.created_at|date('Y-m-d')}}</p>
@@ -73,21 +48,3 @@ function onStart()
     {% endfor %}
 </ul>
 {{ news.render|raw }}
-
-{% if records.lastPage > 1 %}
-    <ul class="pagination">
-        {% if records.currentPage > 1 %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
-        {% endif %}
-
-        {% for page in 1..records.lastPage %}
-            <li class="{{ records.currentPage == page ? 'active' : null }}">
-                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-            </li>
-        {% endfor %}
-
-        {% if records.lastPage > records.currentPage %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
-        {% endif %}
-    </ul>
-{% endif %}
