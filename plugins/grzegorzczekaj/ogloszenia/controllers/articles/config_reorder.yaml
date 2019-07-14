@@ -1,4 +1,4 @@
-title: News2
+title: Articles
 modelClass: GrzegorzCzekaj\Ogloszenia\Models\News
 toolbar:
     buttons: reorder_toolbar
