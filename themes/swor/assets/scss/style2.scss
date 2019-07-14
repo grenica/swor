@@ -42,7 +42,7 @@ $color: #a17f4b;
     }
    
     .layout-header {
-     // position: relative;
+      position: relative;
       padding: 10px 10px;
       grid-area: header;
       
@@ -66,9 +66,9 @@ $color: #a17f4b;
         text-shadow: 3px 3px 4px #000000;
       }
       .btn-links {
-        position: relative;
-        bottom: 5px;
-        left: px;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
       }
     }
     .mylinks {
