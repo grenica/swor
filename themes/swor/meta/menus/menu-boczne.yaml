@@ -40,6 +40,18 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: telefony
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: telefony
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    
+    -
         title: 'Regulanim Organizacyjny'
         nesting: ''
         type: url
@@ -92,6 +104,19 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: IT
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: it
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: 'Sprawy Socjalne'
         nesting: ''
         type: url
@@ -139,17 +164,6 @@ items:
         reference: ''
         cmsPage: ''
         replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: IT
-        nesting: '0'
-        type: static-page
-        code: ''
-        reference: it
-        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''

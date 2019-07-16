@@ -1,5 +1,7 @@
 $header-color: #95a6b6;
 
+$color: #a17f4b;
+
  * {
     box-sizing: border-box;
     padding: 0;
@@ -31,7 +33,7 @@ $header-color: #95a6b6;
          //align-items: stretch;
          min-height: 100vh;
          grid-template-columns: 1fr 2fr 1fr;
-         grid-template-rows: 120px auto 60px;
+         grid-template-rows: 140px auto 40px;
          //grid-template-rows: auto;
          grid-template-areas: 
          "header header header" 
@@ -41,20 +43,32 @@ $header-color: #95a6b6;
    
     .layout-header {
       position: relative;
-      padding: 20px 20px;
+      padding: 10px 10px;
       grid-area: header;
       
       -webkit-box-shadow: 0 8px 6px -6px black;
       -moz-box-shadow: 0 8px 6px -6px black;
       box-shadow: 0 8px 6px -6px black;
 
-      background-image:linear-gradient(to bottom right, #a17f4b, #b3b9bb); 
+     // background-image:linear-gradient(to bottom right, #a17f4b, #b3b9bb); 
+      background-image: url('../../assets/img/SR_strzyzow.png');
+      background-repeat: no-repeat;
+      background-size: cover;
       h1 {
-        //text-align: center;
-        //font-weight: bold;
+       
+        font-weight: 900;
+        //font-family: Georgia, 'Times New Roman', Times, serif;
         //text-transform: uppercase;
         width: 80%;
         display: inline-block;
+        //color: #e6dbcb;
+        color: white;
+        text-shadow: 3px 3px 4px #000000;
+      }
+      .btn-links {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
       }
     }
     .mylinks {
@@ -116,54 +130,61 @@ $header-color: #95a6b6;
         &:hover {
           background-color: #697175;
           text-decoration:none;
-          color: #b3b9bb;
+          color: #252323;
         }
+      
       }
     }
     .layout-content {
       grid-area: content;
       align-self: stretch;
-      padding: 20px 20px;
+      padding: 10px 10px;
       ul {
         list-style: none;
       }
-      li {
-        background-color: #ece6ae;
-        margin: 6px 0;
-        padding: 6px 10px;
+      .record-list {
+        padding: 5px 5px;
         //border-bottom: 1px solid #303031;
         //border-radius: 6px 6px 3px 3px;
         //box-shadow: 2px 3px 3px 2px #303031;
+        li {
+          margin: 10px 0;
+          border-bottom: 1px solid $color;
+        }
         a {
           font-size: 1.3rem;
           text-decoration: none;
-          color: #df1919;
+          color: #5e451f;
           display: block;
           &:hover {
-            color: #cf5e5e;
+            color: #302412;
           }
         }
         p {
           text-align: right;
-          font-size: .9rem;
-          margin-bottom: 2px;
+          font-size: .7rem;
+          margin-bottom: 0;
           font-style: italic;
         }
+        
+      }
+      .pagination li {
+        display: inline-block;
+        
       }
       .item {
         padding: 5px 5px;
         h2 {
           color: #061430;
           font-size: 1.3rem;
-          border-bottom: 1px solid #a17f4b;
-          margin: 10px 10px;
+          border-bottom: 1px solid ;
+          margin: 0;
           padding: 5px 5px;
          // font-weight: bold;
         }
         p {
           margin-top: 5px;
           height: 100%;
-          //background-color: #dac29f;
           padding: 5px 5px;
         }
       }
@@ -171,13 +192,21 @@ $header-color: #95a6b6;
     }
     .layout-footer {
       grid-area: footer;
-      align-self: end;
       background-color: #303031;
       color: #b2b3ac;
       text-align: center;
       padding: 5px 5px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      
       h3 {
-        font-size: 22px;
+         // position: relative;
+         // top:50%;
+          margin: 0;
+          display: inline-block;
+          font-size: 1rem;
+          align-self: center;
       }
     }
    }

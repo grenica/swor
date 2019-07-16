@@ -1,12 +1,12 @@
-list: $/grzegorzczekaj/ogloszenia/models/news/columns.yaml
+title: Articles
 modelClass: GrzegorzCzekaj\Ogloszenia\Models\News
-title: Ogloszenia
+list: $/grzegorzczekaj/ogloszenia/models/news/columns.yaml
+recordUrl: 'grzegorzczekaj/ogloszenia/articles/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: '20'
 showSetup: true
 showCheckboxes: true
-recordsPerPage: 20
 toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'grzegorzczekaj/ogloszenia/ogloszenia/update/:id'

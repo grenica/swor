@@ -1,4 +1,4 @@
-title: Kategorie
+title: Categories
 modelClass: GrzegorzCzekaj\Ogloszenia\Models\Categories
 toolbar:
     buttons: reorder_toolbar
