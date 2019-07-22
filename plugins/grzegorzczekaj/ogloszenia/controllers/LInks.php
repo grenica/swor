@@ -1,9 +1,9 @@
-<?php namespace GrzegorzCzekaj\Dynamiclink\Controllers;
+<?php namespace GrzegorzCzekaj\Ogloszenia\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
 
-class Links extends Controller
+class LInks extends Controller
 {
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController',        'Backend\Behaviors\ReorderController'    ];
     
@@ -14,6 +14,6 @@ class Links extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('GrzegorzCzekaj.Dynamiclink', 'main-menu-item');
+        BackendMenu::setContext('GrzegorzCzekaj.Ogloszenia', 'main-menu-item2');
     }
 }

@@ -28,7 +28,6 @@ fields:
         type: number
     link:
         label: Link
-        oc.commentPosition: above
         span: auto
         placeholder: 'http://'
         type: text

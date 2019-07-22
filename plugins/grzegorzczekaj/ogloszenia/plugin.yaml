@@ -18,3 +18,7 @@ navigation:
                 label: Aktualności
                 url: grzegorzczekaj/ogloszenia/articles
                 icon: icon-suitcase
+    main-menu-item2:
+        label: Linki
+        url: grzegorzczekaj/ogloszenia/links
+        icon: icon-life-ring

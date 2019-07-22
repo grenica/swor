@@ -33,3 +33,6 @@
 1.0.12:
     - 'Updated table grzegorzczekaj_ogloszenia_news'
     - builder_table_update_grzegorzczekaj_ogloszenia_news_7.php
+1.0.13:
+    - 'Created table grzegorzczekaj_ogloszenia_links'
+    - builder_table_create_grzegorzczekaj_ogloszenia_links.php

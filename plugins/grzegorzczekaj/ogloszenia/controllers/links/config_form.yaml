@@ -1,0 +1,10 @@
+name: LInks
+form: $/grzegorzczekaj/ogloszenia/models/links/fields.yaml
+modelClass: GrzegorzCzekaj\Ogloszenia\Models\Links
+defaultRedirect: grzegorzczekaj/ogloszenia/links
+create:
+    redirect: 'grzegorzczekaj/ogloszenia/links/update/:id'
+    redirectClose: grzegorzczekaj/ogloszenia/links
+update:
+    redirect: grzegorzczekaj/ogloszenia/links
+    redirectClose: grzegorzczekaj/ogloszenia/links

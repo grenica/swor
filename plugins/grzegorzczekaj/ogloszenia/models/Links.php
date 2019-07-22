@@ -1,4 +1,4 @@
-<?php namespace GrzegorzCzekaj\Dynamiclink\Models;
+<?php namespace GrzegorzCzekaj\Ogloszenia\Models;
 
 use Model;
 
@@ -23,7 +23,7 @@ class Links extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'grzegorzczekaj_dynamiclink_links';
+    public $table = 'grzegorzczekaj_ogloszenia_links';
 
     /**
      * @var array Validation rules

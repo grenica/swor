@@ -1,6 +1,6 @@
-list: $/grzegorzczekaj/dynamiclink/models/links/columns.yaml
-modelClass: GrzegorzCzekaj\Dynamiclink\Models\Links
-title: Links
+list: $/grzegorzczekaj/ogloszenia/models/links/columns.yaml
+modelClass: GrzegorzCzekaj\Ogloszenia\Models\Links
+title: LInks
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true
@@ -9,4 +9,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'grzegorzczekaj/dynamiclink/links/update/:id'
+recordUrl: 'grzegorzczekaj/ogloszenia/links/update/:id'

@@ -1,11 +1,7 @@
 columns:
-    name:
-        label: Nazwa
-        type: text
     id:
         label: id
         type: number
-        invisible: true
     backgr_color_start:
         label: backgr_color_start
         type: text
@@ -15,12 +11,11 @@ columns:
     backgr_image:
         label: backgr_image
         type: text
-    deleted_at:
-        label: deleted_at
-        type: datetime
-        invisible: true
-    posision:
-        label: posision
+    name:
+        label: name
+        type: text
+    position:
+        label: position
         type: text
     check:
         label: check
@@ -29,3 +24,7 @@ columns:
     link:
         label: link
         type: text
+    deleted_at:
+        label: deleted_at
+        type: datetime
+        invisible: true

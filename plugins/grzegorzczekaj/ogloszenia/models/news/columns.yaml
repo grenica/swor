@@ -13,7 +13,7 @@ columns:
         label: updated_at
         type: datetime
         invisible: true
-    publshed:
+    published:
         label: Published
         type: text
     deleted_at:
