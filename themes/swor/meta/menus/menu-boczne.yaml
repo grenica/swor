@@ -43,14 +43,15 @@ items:
         title: telefony
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: telefony
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-    
     -
         title: 'Regulanim Organizacyjny'
         nesting: ''
@@ -157,13 +158,9 @@ items:
             isExternal: '0'
     -
         title: 'Regulamin pracy'
-        nesting: ''
         type: url
         url: /swor/regulamin-pracy
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

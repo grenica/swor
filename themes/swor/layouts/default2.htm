@@ -1,11 +1,16 @@
 description = "Default2"
 
-[staticMenu]
-code = "menu-boczne"
-
 [staticPage]
 useContent = 1
 default = 0
+
+[menu]
+start = "id-3"
+activeNode = 0
+listItemClasses = "item"
+primaryClasses = "nav nav-pills"
+secondaryClasses = "dropdown-menu"
+numberOfLevels = 2
 ==
 <!DOCTYPE html>
 <html>
@@ -37,11 +42,16 @@ default = 0
             {% partial 'site/header' %} 
         </header>
         <aside class="aside-menu">
-            {% if staticMenu.menuItems %}
+            
+{% component 'menu' %}
+            
+          {# {% if staticMenu.menuItems %}
     <ul>
         {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
     </ul>
 {% endif %}
+#}
+ 
         </aside>
         <!-- Content -->
         <section class="layout-content">

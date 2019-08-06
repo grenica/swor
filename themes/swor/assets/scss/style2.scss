@@ -32,7 +32,7 @@ $color: #a17f4b;
          //justify-items: stretch;
          //align-items: stretch;
          min-height: 100vh;
-         grid-template-columns: 1fr 2fr 1fr;
+         grid-template-columns: 180px 2fr 1fr;
          grid-template-rows: 140px auto 40px;
          //grid-template-rows: auto;
          grid-template-areas: 
@@ -50,8 +50,8 @@ $color: #a17f4b;
       -moz-box-shadow: 0 8px 6px -6px black;
       box-shadow: 0 8px 6px -6px black;
 
-     // background-image:linear-gradient(to bottom right, #a17f4b, #b3b9bb); 
-      background-image: url('../../assets/img/SR_strzyzow.png');
+      background-image:linear-gradient(to bottom right, #a17f4b, #b3b9bb); 
+     // background-image: url('../../assets/img/SR_strzyzow.png');
       background-repeat: no-repeat;
       background-size: cover;
       h1 {
@@ -133,6 +133,9 @@ $color: #a17f4b;
           color: #252323;
         }
       
+      }
+      .active {
+        background-color: red;
       }
     }
     .layout-content {
