@@ -5,19 +5,12 @@
             {% if primaryNav.getChildCount and numberOfLevels > 1 %}
                 <li class="dropdown {{ listItemClasses }} {{ primaryNav.getListItemClasses(activeLeft, activeRight) }}">
                     <a href="{{ primaryNav.getLinkHref }}" target="{{ primaryNav.getLinkTarget }}" class="dropdown-toggle" data-toggle="dropdown">
-                        {{ primaryNav.title }}<span class="caret"></span>
+                        {{ primaryNav.title }} <span class="caret"></span>
                     </a>
             {% else %}
-                    {% set name = primaryNav.parameters %}
-                    
-                    {% if name=='{"slug":"zarzadzenia"}' %}
-                            <li class="active">
-                        {% else %}
-                            <li class="{{ listItemClasses }}"></li>
-                    {% endif %}
-                
+                <li class="{{ listItemClasses }} {{ primaryNav.getListItemClasses(activeLeft, activeRight) }}">
                     <a href="{{ primaryNav.getLinkHref }}" target="{{ primaryNav.getLinkTarget }}">
-                        {{ primaryNav.title }} A {{ name }}
+                        {{ primaryNav.title }}
                     </a>
             {% endif %}
             {% if primaryNav.getChildCount and numberOfLevels > 1 %}
@@ -26,7 +19,7 @@
                         {% if secondaryNav.enabled %}
                             <li class="{{ listItemClasses }} {{ secondaryNav.getListItemClasses(activeLeft, activeRight) }}">
                                 <a href="{{ secondaryNav.getLinkHref }}" target="{{ secondaryNav.getLinkTarget }}">
-                                    {{ secondaryNav.title }} 
+                                    {{ secondaryNav.title }}
                                 </a>
                                 {% if secondaryNav.getChildCount and numberOfLevels > 2 %}
                                     <ul class="{{ tertiaryClasses }}">
@@ -34,7 +27,7 @@
                                             {% if tertiaryNav.enabled %}
                                                 <li class="{{ listItemClasses }} {{ tertiaryNav.getListItemClasses(activeLeft, activeRight) }}">
                                                     <a href="{{ tertiaryNav.getLinkHref }}" target="{{ tertiaryNav.getLinkTarget }}">
-                                                        {{ tertiaryNav.title }} 
+                                                        {{ tertiaryNav.title }}
                                                     </a>
                                                 </li>
                                             {% endif %}

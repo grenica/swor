@@ -35,14 +35,12 @@ function onStart()
 }
 ?>
 ==
-
-
 <ul class="record-list">
-    
+    {% set sl = 'slug' %}
      {% for n in news %}
      <li>
         <p>{{ n.author }} , {{ n.created_at|date('Y-m-d')}}</p>
-         <a href="{{'news_detail'|page({slug: n.slug }) }}">{{ n.name }}</a>
+         <a href="{{'news_detail'|page({slug:this.param.slug ,slug2: n.slug }) }}">{{ n.name }}</a>
      </li>   
     {% else %}
         <li class="no-data">{{ noRecordsMessage }}</li>

@@ -1,11 +1,11 @@
 title = "news"
-url = "/news/:slug"
+url = "/:slug/:slug2"
 layout = "default2"
 is_hidden = 0
 
 [builderDetails]
 modelClass = "GrzegorzCzekaj\Ogloszenia\Models\News"
-identifierValue = "{{ :slug }}"
+identifierValue = "{{ :slug2 }}"
 modelKeyColumn = "slug"
 displayColumn = "name"
 notFoundMessage = "Record not found"

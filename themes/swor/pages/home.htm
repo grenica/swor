@@ -38,7 +38,7 @@ function onStart()
             {# Use spaceless tag to remove spaces inside the A tag. #}
             {% spaceless %}
                     
-                    <a href="{{ 'news_detail'|page({slug: n.slug }) }}"> {{ n.name }} </a>
+                    <a href="{{ 'news_detail'|page({slug:'aktualnosci',slug2: n.slug }) }}"> {{ n.name }} </a>
                
             {% endspaceless %}
         </li>

@@ -1,0 +1,26 @@
+[viewBag]
+==
+<?php
+use \Benfreke\menumanager\Models\Menu;
+
+
+function onStart()
+{  
+  $m = Menu::where('parent_id','<>',null)->where('enabled',true)->get();
+  //$news = $cat->news()->where('published',1)->orderBy('created_at','desc')->take(5)->get();
+  $this['menu']=$m;
+}
+?>
+==
+<ul class="{{ primaryClasses }}">
+            {% for mm in menu %} 
+                {% if this.param.slug == mm.query_string %}
+                <li class="active">
+                {% else %}
+                <li>
+                {% endif %}
+                    <!-- <a href={{ mm.url|page({slug: 'zarzadzenia' }) }}>{{ mm.title }}</a> -->
+                    <a href={{ mm.url|page({slug: mm.query_string }) }}>{{ mm.title }}</a>
+                </li>
+            {% endfor %}   
+</ul>

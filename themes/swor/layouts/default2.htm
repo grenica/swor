@@ -3,32 +3,24 @@ description = "Default2"
 [staticPage]
 useContent = 1
 default = 0
-
-[menu]
-start = "id-3"
-activeNode = 0
-listItemClasses = "item"
-primaryClasses = "nav nav-pills"
-secondaryClasses = "dropdown-menu"
-numberOfLevels = 2
 ==
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>SWOR {{ this.page.title }}</title>
+        <title>SWOR</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
+        <meta name="author" content="Grzegorz Czekaj">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="generator" content="OctoberCMS">
       
         <link href="{{ ['assets/scss/style2.scss']|theme }}" rel="stylesheet">
-        <link href="{{ [
-            'assets/vendor/bootstrap/dist/css/bootstrap.min.css',
-    
-            
-          ]|theme }}" rel="stylesheet">
+        <!-- <link href="{{ ['assets/vendor/bootstrap/dist/css/bootstrap.min.css']|theme }}" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         
         {% styles %}
     </head>
@@ -38,20 +30,11 @@ numberOfLevels = 2
         <header class="layout-header">
           
             {% partial 'site/links' %}
-        
             {% partial 'site/header' %} 
+            
         </header>
         <aside class="aside-menu">
-            
-{% component 'menu' %}
-            
-          {# {% if staticMenu.menuItems %}
-    <ul>
-        {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
-    </ul>
-{% endif %}
-#}
- 
+            {% partial 'site/menu' %} 
         </aside>
         <!-- Content -->
         <section class="layout-content">
@@ -64,8 +47,8 @@ numberOfLevels = 2
         </footer>
 
         <!-- Scripts -->
-        <script src="{{ 'assets/js/jquery-3.4.0.min.js'|theme }}"></script>
-        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <!-- <script src="{{ 'assets/js/jquery-3.4.0.min.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script> -->
         <script src="{{ 'assets/js/app.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}

@@ -1,6 +1,6 @@
 $header-color: #95a6b6;
 
-$color: #a17f4b;
+$color: #2c2213;
 
  * {
     box-sizing: border-box;
@@ -32,8 +32,8 @@ $color: #a17f4b;
          //justify-items: stretch;
          //align-items: stretch;
          min-height: 100vh;
-         grid-template-columns: 180px 2fr 1fr;
-         grid-template-rows: 140px auto 40px;
+         grid-template-columns: 210px 2fr 1fr;
+         grid-template-rows: 130px auto 40px;
          //grid-template-rows: auto;
          grid-template-areas: 
          "header header header" 
@@ -50,7 +50,7 @@ $color: #a17f4b;
       -moz-box-shadow: 0 8px 6px -6px black;
       box-shadow: 0 8px 6px -6px black;
 
-      background-image:linear-gradient(to bottom right, #a17f4b, #b3b9bb); 
+      background-image:linear-gradient(to bottom right, #68afaf, #683a83); 
      // background-image: url('../../assets/img/SR_strzyzow.png');
       background-repeat: no-repeat;
       background-size: cover;
@@ -94,30 +94,54 @@ $color: #a17f4b;
 
     .linki {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
       grid-column-gap: 5px;
       grid-row-gap: 5px;
+      .gallery_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+      }
       a {
         text-align: center;
-        font-weight: 700;
-        font-size: 21px; //to do
-        padding: 10px 10px;
-        color: #1b1313;
-        border-radius: 10px 10px 10px 10px;
-        display: inline-block;
-        text-decoration: none;
-        &:hover {
-          text-decoration: none;
-
+        font-size: 21px;
+       // padding: 10px 10px;
+        
+      }
+      figure {
+        margin: 0;
+        &:hover img {
+          opacity: 1;
+          -webkit-animation: flash 1.5s;
+          animation: flash 1.5s;
         }
       }
+      
+      @-webkit-keyframes flash {
+        0% {
+          opacity: .4;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes flash {
+        0% {
+          opacity: .4;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+     
     }
     .aside-menu {
       grid-area: aside;
       align-self: stretch;
-      background-color: #3d4144;
-      //min-height: 100%;
+      background-color: #7eacbe;
+      padding-top: 5px;
       a {
         padding: 3px 3px;
         display: block;
@@ -125,17 +149,23 @@ $color: #a17f4b;
         text-align: center;
         font-size: 1.1rem;
         font-weight: 800;
-        color: #b3b9bb;
+        color: #2f3d42;
 
         &:hover {
-          background-color: #697175;
+          background-color: #5f7d8a;
           text-decoration:none;
-          color: #252323;
+          color: #64e0bb;
         }
       
       }
+      h1 {
+        color: white;
+      }
       .active {
-        background-color: red;
+        background-color: #6c939e;
+        a {
+          color: #fdfdfd;
+        }
       }
     }
     .layout-content {
@@ -157,10 +187,10 @@ $color: #a17f4b;
         a {
           font-size: 1.3rem;
           text-decoration: none;
-          color: #5e451f;
+          color: #151622;
           display: block;
           &:hover {
-            color: #302412;
+            color: #07495a;
           }
         }
         p {
@@ -180,7 +210,7 @@ $color: #a17f4b;
         h2 {
           color: #061430;
           font-size: 1.3rem;
-          border-bottom: 1px solid ;
+          border-bottom: 1px solid black;
           margin: 0;
           padding: 5px 5px;
          // font-weight: bold;
@@ -195,8 +225,9 @@ $color: #a17f4b;
     }
     .layout-footer {
       grid-area: footer;
-      background-color: #303031;
-      color: #b2b3ac;
+      //background-color: #1e504d;
+      background-image:linear-gradient(to right, #68afaf, #683a83); 
+      color: #182c38;
       text-align: center;
       padding: 5px 5px;
       display: grid;
@@ -208,7 +239,7 @@ $color: #a17f4b;
          // top:50%;
           margin: 0;
           display: inline-block;
-          font-size: 1rem;
+          font-size: 1.3rem;
           align-self: center;
       }
     }

@@ -28,16 +28,11 @@ function onStart()
 }
 ?>
 ==
-<a data-toggle="modal" href="#contentBasic" class="btn-links btn btn-primary" >
+<!-- <a data-toggle="modal" href="#contentBasic" class="btn-links btn btn-primary" >
                 Linki
-</a>
+</a> -->
+<a href="#modalCenter" role="button" class="btn btn-primary btn-links" data-toggle="modal">Linki</a>
 
-<div class="control-popup modal fade" id="contentBasic">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-               
 {% set records = builderList2.records %}
 {% set displayColumn = builderList2.displayColumn %}
 {% set noRecordsMessage = builderList2.noRecordsMessage %}
@@ -45,20 +40,55 @@ function onStart()
 {% set detailsKeyColumn = builderList2.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList2.detailsUrlParameter %}
 
+<!-- Modal HTML -->
+<div id="modalCenter" class="modal fade" tabindex="-1">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Linki</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                
+                  <div class="linki">
+                        {% for record in records %}
+                        {% if record.check == 2 %}
+                            <a href="{{ record.link }}" style="background-image:linear-gradient(to right, {{record.backgr_color_start}}, {{record.backgr_color_end}})">
+                                {{ attribute(record, displayColumn) }}
+                              </a>
+                        {% elseif record.check == 1 %}
+
+                            <a href="{{ record.link }}">
+                            <figure>
+                                <img src="{{record.backgr_image|media}}" alt="Link" class="gallery_img">
+                            </figure>
+                            </a>
+                            {% endif %}
+                    {% endfor %}
+                  </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{#
 <div class="linki">
     {% for record in records %}
-    
-            {# Use spaceless tag to remove spaces inside the A tag. #}
             {% spaceless %}
-       
-                    
+        
                     {% if record.check == 2 %}
                        <a href="{{ record.link }}" style="background-image:linear-gradient(to right, {{record.backgr_color_start}}, {{record.backgr_color_end}})">
                         {{ attribute(record, displayColumn) }}
                       </a>
                     {% elseif record.check == 1 %}
                     <a href="{{ record.link }}">
-                      <img  src="{{record.backgr_image|media}}"/>
+                      <img src="{{record.backgr_image|media}}"/>
                       </a>
                     {% endif %}
                 
@@ -70,10 +100,11 @@ function onStart()
     {% else %}
         <li class="no-data">{{ noRecordsMessage }}</li>
     {% endfor %}
-</div>
+</div> 
 
 
             </div>
         </div>
     </div>
 </div>
+#}

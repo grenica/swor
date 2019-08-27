@@ -22,7 +22,7 @@ fields:
             2: Gradient
         span: auto
         type: radio
-    posision:
+    position:
         label: Pozycja
         span: auto
         type: number
